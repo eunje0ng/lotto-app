@@ -16,10 +16,10 @@
 <body id="main">
     <h1 class="d-none">로또 한울</h1>
     <div id="sidePannel" class="d-none">
-        <a href="#"><i class="fa-solid fa-bars"></i></a>                                                
+        <div id="closeSide"><a href="#"><i class="fa-solid fa-close"></i></a> </div>                                               
         <div class="pannel-overlay">
             <nav>
-                <ul id="snb"><!-- side navigation bar -->
+                <ul id="snb">
                     <li><a href="#">소개</a></li>
                     <li><a href="#">서비스</a></li>
                     <li><a href="#">당첨확률</a></li>
@@ -39,7 +39,7 @@
         <div class="header-top">
             <ul class="top-links">
                 <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
-                <li><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+                <li><div id="openSide"><a href="#"><i class="fa-solid fa-bars"></i></a></div></li>
             </ul>
         </div>
     </header>
@@ -83,5 +83,7 @@
             </form>
         </article>
     </section>
+    <script src="script/routing.js"></script>
+    <script src="script/lotto.js"></script>
 </body>
 </html>
