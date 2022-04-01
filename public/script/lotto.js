@@ -58,9 +58,9 @@ function show5num(){
         // console.log(new_num_five);
         num_five_arr.push(new_num_five);
     }
-    // console.log(num_five_arr);
-    
-    //JSON.stringify() 와 JSON.parse() 데이터를 주고받을 때 사용
-    localStorage.setItem("lottoNums",JSON.stringify(num_five_arr));
-    location.href = "/result5";
+    //console.log(num_five_arr);
+
+    // JSON.stringfigy()  vs  JSON.parse() : 데이터 주고받을때 사용
+    localStorage.setItem("lottoNums",JSON.stringify(num_five_arr))
+    location.href = "/result5"
 }

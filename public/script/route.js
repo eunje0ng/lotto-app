@@ -21,20 +21,23 @@ function sideClose(){
     sidePan.classList.add("d-none");
 }
 
-//로또1게임 잠금해제
-const unlockBTN = document.querySelector("#blind")
-                unlockBTN.addEventListener("click", handleClick)
-                let btnStatus = "lock"
-                function handleClick(e){
-                    if(e.target.className == "btnStatus"){
-                        unlock();
-                    } else {
-                        lock();
-                    }
-                    function unlock(){
-                        unlockBTN.className="unlock"
-                    }
-                    function lock(){
-                        unlockBTN.className="lock"
-                    }
-                }
+/* 로또 1게임 - 잠금해제 : 내용은 아직 작성안함 */
+const toggleLockBtn = document.querySelector("#blind")
+toggleLockBtn.addEventListener("click", handleClick)
+let btnStatus = "lock"
+
+function handleClick(e){
+    if(e.target.className == btnStatus) {
+        unlock("해제");                        
+    } else {
+        lock("잠금");
+    }
+}
+function unlock(message){
+    toggleLockBtn.className = "unlock"
+    toggleLockBtn.textContent = message
+}
+function lock(message) {
+    toggleLockBtn.className = "lock"
+    toggleLockBtn.textContent = message
+}
