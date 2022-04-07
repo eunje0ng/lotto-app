@@ -1,0 +1,270 @@
+@charset "utf-8";
+:root {
+    --base-text-color: #333;
+    --base-bg-color: #white;
+    --base-font-size: 16px;
+}
+body {
+    background-color: antiquewhite;
+    font: 16px/1.5 "Noto Sans KR";
+    color: var(--base-text-color);
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+@media screen and (max-width:480px) {
+    html {height: 100%;}
+    body {
+        background: linear-gradient(to bottom, #fff, #00a1d24b);
+    }
+    .d-none {display: none;}
+    .logo {
+        width: 312px;
+        height: 217px;
+        margin: 3rem auto;
+    }
+    .btns {
+        display: flex;
+        flex-direction: column;  /*상하배치 */
+        width: 60vw;
+        margin: 0 auto;
+    }
+    button {
+        height: 100px;
+        color: white;
+        font-size: 2rem;
+        font-weight: 600;
+        border: 0;
+        border-radius: 1rem;
+        margin: 0 0 2rem 0;
+        padding-left: 4rem;
+    }
+    #make_num5 {
+        background: #8ec220 url(image/x5.png) no-repeat 15% center;
+    }
+    #make_num1 {
+        background: #00A0D2 url(image/x1.png) no-repeat 15% center;
+    }
+    .links {
+        text-align: center;
+        font-size: 20px;
+        color: #666;
+        margin: 25px 0;
+    }
+    .links li {
+        margin: 8px 0;
+    }
+    /* ==================login================================================================ */
+    article {
+        width: 70%;
+        margin: 0 auto;
+    }
+    #loginForm li, #registerForm li {
+        display: flex;
+        position: relative;
+        margin: 0 0 1rem 0
+    }
+    #loginForm li input, #registerForm li input {
+        text-indent: 20%;
+        border: 0
+    }
+    #loginForm li label, #registerForm li label {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+        color: #898989;
+    }
+    #userId, #userPw, [type=submit] {
+        width: 100%;
+        height: 50px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+    }
+
+    #loginForm li input[type=submit], #registerForm li input[type=submit] {
+        background: var(--main-color3);
+        color: var(--base-text-white);
+        text-indent: 0;
+        font-size: var(--base-font-size)
+    }
+    .sns-icons {
+        display: flex;
+        justify-content: center;
+        column-gap: 1rem;
+        font-size: 3rem
+    }
+
+    /* ==================regiser================================================================ */
+    .header-top {
+        background-color: #00A0D2;
+        height: 70px;
+        color: white;
+        width: 100%;
+    }
+    .top-links {
+        display: flex;
+        justify-content: space-between;
+        font-size: 2rem;
+        padding: .5rem 2rem;
+    }
+    .section-title {
+        text-align: center;
+    }
+}
+/* ============================고객센터====================================================== */
+.icon-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin: 0 1.5rem;
+}
+.icon-list li {
+    box-shadow: 2px 2px 10px 0px rgba(0,0,0,.2);
+    min-height: 120px;
+    border-radius: 10px;
+}
+.icon-list li:hover {
+    background-color: #00A0D2;
+    color: white;
+}
+.icon-list li a {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+/* ============================사이드메뉴================================ */
+#sidePannel {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    top: 70px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+#closeSide {
+    background-color: #00A0D2;
+    color: white;
+    width: 90px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    top: -65px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+.pannel-overlay {
+    background: #262626;
+    width: 50%;
+    height: 100%;
+    margin: 0 0 0 50%;
+}
+.pannel-overlay nav {
+    color: white;
+    padding: 0 20%;
+}
+#snb > li {
+    position: relative;
+    padding: 1rem 0;
+    font-size: 24px;
+}
+#snb > li::after {
+    content: "+";
+    display: inline;
+    position: absolute;
+    right: 0;
+    color: white;
+    font-size: 14px;
+}
+/* ====1생성============================================================================ */
+#lotto_num .dl-wrap {
+    display: table;
+    width: 90%;
+    margin: 0 auto;
+}
+#lotto_num dl {
+    display: table-row;
+}
+#lotto_num dt, #lotto_num dd {
+    display: table-cell
+}
+#lotto_num dt {
+    background: #E4E4E4;
+    color: var(--base-text-dark);
+    padding: 1rem 2rem
+}
+#lotto_num dd {
+    border-top: 1px solid #E4E4E4;
+    border-bottom: 1px solid #E4E4E4;
+    letter-spacing: 5px
+}
+
+ul#lotto_num li { /* 종속 선택자 */
+    display: flex;
+}
+ul#lotto_num li span{
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    box-sizing: border-box
+}
+ul#lotto_num li > span:first-child {
+    text-align: center;
+    background: #E4E4E4;
+    color: var(--base-text-dark);
+    padding: 0 1.250rem;
+    flex: 1
+}
+ul#lotto_num li > span:last-child {
+    border-top: 1px solid #E4E4E4;
+    border-bottom: 1px solid #E4E4E4;
+    letter-spacing: 5px;
+    text-indent: 10%;
+    flex: 9
+}
+#blind {
+    height: 30px;
+    color: var(--base-text-dark);
+    font-size: var(--base-font-size-small, 11px);
+    width: 150px;
+    border-radius: 50px;
+    position: relative;
+    display: block;
+    margin: 2rem auto;
+    transition: all ease-in-out .3s        
+}
+#blind.lock {
+    background: var(--base-bg-gray, #e4e4e4);        
+}
+#blind.unlock {                
+    background: var(--main-color3);
+    color: var(--base-text-white);
+}
+#blind::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background: var(--base-bg-white);       
+    top: 5px;
+    transition: all ease-in-out .2s
+}
+#blind.lock::before {
+    left: 5px
+}
+#blind.unlock::before {
+    left: calc(100% - 25px)
+}
+
+@media screen and (max-width:320px){
+    #lotto_num dd {
+        letter-spacing: -1px;
+    }
+}

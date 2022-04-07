@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="한울나눔로또">
+    <meta property="og:site_name" content="한울나눔로또">
+    <meta property="og:url" content="192.168.0.59:3000">
+    <meta property="og:description" content="한울 나눔로또 웹앱">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="192.168.0.59:3000/public/images/logo.png">
+    <title>smartUIUX</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7a40af6e56.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="image/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1 class="d-none">한울로또</h1>
+        <div class="logo">
+            <a href="#"><img src="image/logo.png" alt="로고"></a>
+        </div>
+    </header>
+    <section>
+        <div class="btns">
+            <button id="make_num5"><a href="/result5">생성하기</a></button>
+            <button id="make_num1"><a href="/result1">생성하기</a></button>
+        </div>
+    </section>
+    <footer>
+        <ul class="links">
+            <li><a href="/login"><i class="fa-solid fa-right-to-bracket"></i> 로그인</a></li>
+            <li><a href="/join"><i class="fa-solid fa-user-check"></i> 회원가입</a></li>
+            <li><a href="/cs"><i class="fa-solid fa-headset"></i> 고객센터</a></li>
+        </ul>
+    </footer>
+    <script src="script/routing.js"></script>
+    <script src="script/lotto.js"></script>
+</body>
+</html>
